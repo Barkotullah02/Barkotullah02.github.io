@@ -1,0 +1,561 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkotullah Opu | Full Stack Developer (Web, App, React, Flutter)</title>
+    <meta name="description" content="Barkotullah Opu is a Full Stack Developer specializing in web and mobile apps using React and Flutter. Student Worker at NSU IT, Campus Coordinator at YUNet, Campus Ambassador at bdapps, and IT Officer at ShobShopping.">
+    <meta name="author" content="Barkotullah Opu">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#050505">
+    <link rel="canonical" href="https://barkotullah02.github.io/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Barkotullah Opu Portfolio">
+    <meta property="og:title" content="Barkotullah Opu | Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer (Web + App + Flutter + React) with roles at NSU IT, YUNet, bdapps, and ShobShopping.">
+    <meta property="og:url" content="https://barkotullah02.github.io/">
+    <meta property="og:image" content="https://barkotullah02.github.io/me_transparent.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Barkotullah Opu | Full Stack Developer">
+    <meta name="twitter:description" content="Web and mobile app developer focused on React and Flutter.">
+    <meta name="twitter:image" content="https://barkotullah02.github.io/me_transparent.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Barkotullah Opu",
+            "url": "https://barkotullah02.github.io/",
+            "image": "https://barkotullah02.github.io/me_transparent.png",
+            "jobTitle": "Full Stack Developer",
+            "description": "Barkotullah Opu is a Full Stack Developer specializing in web and mobile apps using React and Flutter. Student Worker at NSU IT, Campus Coordinator at YUNet, Campus Ambassador at bdapps, and IT Officer at ShobShopping.",
+            "knowsAbout": ["React", "Flutter", "Web Development", "Mobile App Development", "JavaScript", "Tailwind CSS"],
+            "sameAs": [
+                "https://github.com/Barkotullah02"
+            ],
+            "hasOccupation": [
+                {
+                    "@type": "Occupation",
+                    "name": "Student Worker",
+                    "occupationLocation": {
+                        "@type": "Organization",
+                        "name": "NSU IT"
+                    }
+                },
+                {
+                    "@type": "Occupation",
+                    "name": "Campus Coordinator",
+                    "occupationLocation": {
+                        "@type": "Organization",
+                        "name": "YUNet"
+                    }
+                },
+                {
+                    "@type": "Occupation",
+                    "name": "Campus Ambassador",
+                    "occupationLocation": {
+                        "@type": "Organization",
+                        "name": "bdapps"
+                    }
+                },
+                {
+                    "@type": "Occupation",
+                    "name": "IT Officer",
+                    "occupationLocation": {
+                        "@type": "Organization",
+                        "name": "ShobShopping"
+                    }
+                }
+            ]
+        }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-cyan-900/50">
+        <div class="text-2xl font-bold font-gaming neon-text">BARKOTULLAH OPU</div>
+        <div class="space-x-6 hidden lg:flex items-center text-xs font-gaming">
+            <a href="#home" class="hover:text-cyan-400 transition">HOME</a>
+            <a href="#about" class="hover:text-cyan-400 transition">ABOUT</a>
+            <a href="#services" class="hover:text-cyan-400 transition">SERVICES</a>
+            <a href="#skills" class="hover:text-cyan-400 transition">SKILLS</a>
+            <a href="#achievements" class="hover:text-cyan-400 transition">ACHIEVEMENTS</a>
+            <a href="#certificates" class="hover:text-cyan-400 transition">CERTIFICATES</a>
+            <a href="#projects" class="hover:text-cyan-400 transition">PROJECTS</a>
+            <a href="dev-daily.html" class="hover:text-cyan-400 transition">DEV DAILY</a>
+            <a href="#contact" class="hover:text-cyan-400 transition">CONTACT</a>
+            <button id="sound-toggle" aria-label="Toggle background sound" class="text-cyan-400 hover:scale-110 transition-all ml-2">
+                <i class="fas fa-volume-up text-lg"></i>
+            </button>
+        </div>
+        <a href="#contact" class="neon-button px-6 py-2 font-gaming text-sm uppercase hidden md:block">Hire Me</a>
+        <button class="lg:hidden text-cyan-400 text-2xl" aria-label="Open mobile menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center space-y-6 text-xl font-gaming hidden">
+        <button class="absolute top-6 right-6 text-cyan-400 text-3xl" aria-label="Close mobile menu" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" onclick="toggleMenu()" class="hover:text-cyan-400 transition">HOME</a>
+        <a href="#about" onclick="toggleMenu()" class="hover:text-cyan-400 transition">ABOUT</a>
+        <a href="#services" onclick="toggleMenu()" class="hover:text-cyan-400 transition">SERVICES</a>
+        <a href="#skills" onclick="toggleMenu()" class="hover:text-cyan-400 transition">SKILLS</a>
+        <a href="#achievements" onclick="toggleMenu()" class="hover:text-cyan-400 transition">ACHIEVEMENTS</a>
+        <a href="#certificates" onclick="toggleMenu()" class="hover:text-cyan-400 transition">CERTIFICATES</a>
+        <a href="#projects" onclick="toggleMenu()" class="hover:text-cyan-400 transition">PROJECTS</a>
+        <a href="dev-daily.html" onclick="toggleMenu()" class="hover:text-cyan-400 transition">DEV DAILY</a>
+        <a href="#contact" onclick="toggleMenu()" class="hover:text-cyan-400 transition">CONTACT</a>
+        <button id="sound-toggle-mobile" class="text-cyan-400 flex items-center gap-2">
+            <i class="fas fa-volume-up"></i> SOUND
+        </button>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6 overflow-hidden">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-left order-2 lg:order-1">
+                    <h2 class="text-cyan-500 font-gaming tracking-wider mb-4">Barkotullah Opu · Full Stack Developer</h2>
+                    <h1 class="text-5xl md:text-7xl font-bold font-gaming mb-6 glitch-wrapper" data-text="Web + App + Flutter + React">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">Web + App + Flutter + React</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+                        Barkotullah Opu is a Full Stack Developer specializing in web and mobile apps using React and Flutter.
+                        Student Worker at NSU IT, Campus Coordinator at YUNet, Campus Ambassador at bdapps, and IT Officer at ShobShopping.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#projects" class="neon-button px-10 py-4 font-gaming uppercase tracking-wider text-center">View Projects</a>
+                        <a href="#contact" class="px-10 py-4 border border-gray-700 hover:bg-gray-800 transition font-gaming uppercase tracking-wider text-center">Contact Me</a>
+                        <a href="dev-daily.html" class="px-10 py-4 border border-cyan-700 hover:bg-cyan-900/20 transition font-gaming uppercase tracking-wider text-center">Read Dev Daily</a>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2 flex justify-center relative">
+                    <div class="hero-orb absolute inset-0 bg-cyan-500/20 blur-[100px] rounded-full"></div>
+                    <!-- Floating 3D Elements -->
+                    <div class="floating-3d-element -top-10 -left-10" style="animation-delay: 0s;"><i class="fas fa-code"></i></div>
+                    <div class="floating-3d-element top-20 -right-20" style="animation-delay: -2s;"><i class="fas fa-cubes"></i></div>
+                    <div class="floating-3d-element bottom-10 left-0" style="animation-delay: -4s;"><i class="fas fa-rocket"></i></div>
+                    <div class="floating-3d-element top-1/2 -left-32" style="animation-delay: -1s;"><i class="fas fa-bolt"></i></div>
+                    <div class="floating-3d-element -bottom-20 right-20" style="animation-delay: -3s;"><i class="fas fa-terminal"></i></div>
+                    <div class="floating-3d-element top-0 -right-40" style="animation-delay: -5s;"><i class="fas fa-microchip"></i></div>
+                    <div class="floating-3d-element bottom-40 -left-20" style="animation-delay: -1.5s;"><i class="fas fa-layer-group"></i></div>
+                    
+                    <img src="me_transparent.png" alt="Barkotullah Opu, Full Stack Developer" class="w-full max-w-[500px] relative z-10 hero-image filter drop-shadow-[0_0_15px_rgba(0,242,255,0.4)]" loading="eager" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="section-card p-8 border-l-4 border-purple-500 bg-purple-900/10">
+                    <h2 class="text-3xl font-gaming mb-6 text-purple-400">Professional Profile</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        I build practical, scalable digital products as a Full Stack Developer with a strong focus on React and Flutter. My work combines clean architecture, fast UI, and product thinking to ship reliable web and mobile experiences.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-300 mb-6">
+                        <li>• Full Stack Developer (Web + App + Flutter + React)</li>
+                        <li>• Student Worker at NSU IT</li>
+                        <li>• Campus Coordinator at YUNet</li>
+                        <li>• Campus Ambassador at bdapps</li>
+                        <li>• IT Officer at ShobShopping</li>
+                    </ul>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-black/40 border border-gray-800 rounded">
+                            <div class="text-cyan-400 font-bold text-2xl">3+</div>
+                            <div class="text-xs text-gray-500 uppercase">Years Exp.</div>
+                        </div>
+                        <div class="p-4 bg-black/40 border border-gray-800 rounded">
+                            <div class="text-purple-400 font-bold text-2xl">50+</div>
+                            <div class="text-xs text-gray-500 uppercase">Projects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-gaming text-cyan-400">Work Focus</h3>
+                    <p class="text-gray-400">
+                        I focus on delivering responsive web apps, cross-platform mobile apps, and polished user experiences with maintainable code and clear product outcomes.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-check-circle text-cyan-500"></i>
+                            <span>React + Tailwind Frontend Engineering</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-check-circle text-cyan-500"></i>
+                            <span>Flutter Mobile App Development</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-sm">
+                            <i class="fas fa-check-circle text-cyan-500"></i>
+                            <span>API Integration and Deployment</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 px-6 max-w-6xl mx-auto">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4">Core Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="section-card p-6 border-t-2 border-cyan-500">
+                    <i class="fas fa-globe text-3xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-gaming mb-2">Web Solutions</h3>
+                    <p class="text-gray-400 text-sm">Custom responsive websites and complex web applications built with modern frameworks.</p>
+                </div>
+                <div class="section-card p-6 border-t-2 border-purple-500">
+                    <i class="fas fa-mobile-alt text-3xl text-purple-400 mb-4"></i>
+                    <h3 class="text-xl font-gaming mb-2">App Development</h3>
+                    <p class="text-gray-400 text-sm">High-performance cross-platform mobile apps for iOS and Android.</p>
+                </div>
+                <div class="section-card p-6 border-t-2 border-pink-500">
+                    <i class="fas fa-film text-3xl text-pink-400 mb-4"></i>
+                    <h3 class="text-xl font-gaming mb-2">Video Production</h3>
+                    <p class="text-gray-400 text-sm">Professional video editing and cinematic motion graphics for brands.</p>
+                </div>
+                <div class="section-card p-6 border-t-2 border-yellow-500">
+                    <i class="fas fa-paint-brush text-3xl text-yellow-400 mb-4"></i>
+                    <h3 class="text-xl font-gaming mb-2">Graphic Design</h3>
+                    <p class="text-gray-400 text-sm">Creative branding, UI/UX design, and marketing materials that stand out.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Tree Section -->
+        <section id="skills" class="py-20 px-6 max-w-6xl mx-auto bg-gray-900/20">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4">Skills Overview</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Development -->
+                <div class="section-card p-6">
+                    <h3 class="text-xl font-gaming mb-6 text-cyan-400 flex items-center gap-2">
+                        <i class="fas fa-code"></i> Programming
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>React / Next.js / Tailwind</span><span>95%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-cyan-500 h-full" style="width: 95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Node.js / Express / MongoDB</span><span>88%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-cyan-500 h-full" style="width: 88%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Flutter / Dart / Firebase</span><span>85%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-cyan-500 h-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Python / C++ / Java</span><span>75%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-cyan-500 h-full" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Editing -->
+                <div class="section-card p-6">
+                    <h3 class="text-xl font-gaming mb-6 text-purple-400 flex items-center gap-2">
+                        <i class="fas fa-video"></i> Video Editing
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Adobe After Effects (VFX)</span><span>80%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-purple-500 h-full" style="width: 80%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Adobe Premiere Pro</span><span>90%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-purple-500 h-full" style="width: 90%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Wondershare Filmora</span><span>95%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-purple-500 h-full" style="width: 95%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>3D Animation (Blender)</span><span>65%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-purple-500 h-full" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphic Design -->
+                <div class="section-card p-6">
+                    <h3 class="text-xl font-gaming mb-6 text-yellow-400 flex items-center gap-2">
+                        <i class="fas fa-palette"></i> Graphic Design
+                    </h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Adobe Photoshop</span><span>92%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-yellow-500 h-full" style="width: 92%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Adobe Illustrator (Vector)</span><span>88%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-yellow-500 h-full" style="width: 88%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Figma (UI/UX Design)</span><span>85%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-yellow-500 h-full" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs mb-1"><span>Canva Pro Design</span><span>100%</span></div>
+                            <div class="w-full bg-gray-800 h-1.5"><div class="bg-yellow-500 h-full" style="width: 100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-20 px-6 max-w-6xl mx-auto">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4">Achievements</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="achievement-card p-6">
+                    <div class="text-cyan-400 mb-2"><i class="fas fa-award text-3xl"></i></div>
+                    <h4 class="font-gaming text-sm mb-1">FULL STACK DEVELOPER</h4>
+                    <p class="text-xs text-gray-500">Building modern web and app solutions with React and Flutter.</p>
+                </div>
+                <div class="achievement-card p-6">
+                    <div class="text-purple-400 mb-2"><i class="fas fa-medal text-3xl"></i></div>
+                    <h4 class="font-gaming text-sm mb-1">NSU IT</h4>
+                    <p class="text-xs text-gray-500">Serving as Student Worker in IT operations and support.</p>
+                </div>
+                <div class="achievement-card p-6">
+                    <div class="text-yellow-400 mb-2"><i class="fas fa-certificate text-3xl"></i></div>
+                    <h4 class="font-gaming text-sm mb-1">YUNET + BDAPPS</h4>
+                    <p class="text-xs text-gray-500">Campus Coordinator and Campus Ambassador contributions.</p>
+                </div>
+                <div class="achievement-card p-6">
+                    <div class="text-green-400 mb-2"><i class="fas fa-trophy text-3xl"></i></div>
+                    <h4 class="font-gaming text-sm mb-1">SHOBSHOPPING</h4>
+                    <p class="text-xs text-gray-500">Working as IT Officer supporting systems and operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Showcase -->
+        <section id="certificates" class="py-20 px-6 max-w-6xl mx-auto bg-gray-900/10">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4 text-right">Certificates</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="certificate-card p-4 rounded-lg">
+                    <div class="aspect-[4/3] bg-gray-800 mb-4 flex items-center justify-center overflow-hidden group">
+                        <i class="fas fa-certificate text-5xl text-gray-700 group-hover:text-cyan-400 transition"></i>
+                    </div>
+                    <h4 class="font-gaming text-sm">Full Stack Development</h4>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Verified by Tech Institute</p>
+                </div>
+                <div class="certificate-card p-4 rounded-lg">
+                    <div class="aspect-[4/3] bg-gray-800 mb-4 flex items-center justify-center overflow-hidden group">
+                        <i class="fas fa-certificate text-5xl text-gray-700 group-hover:text-purple-400 transition"></i>
+                    </div>
+                    <h4 class="font-gaming text-sm">Advanced Motion Graphics</h4>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Adobe Certified Professional</p>
+                </div>
+                <div class="certificate-card p-4 rounded-lg">
+                    <div class="aspect-[4/3] bg-gray-800 mb-4 flex items-center justify-center overflow-hidden group">
+                        <i class="fas fa-certificate text-5xl text-gray-700 group-hover:text-yellow-400 transition"></i>
+                    </div>
+                    <h4 class="font-gaming text-sm">Graphic Design Mastery</h4>
+                    <p class="text-[10px] text-gray-500 uppercase tracking-tighter">Design Academy Global</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 max-w-6xl mx-auto">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden bg-gray-900 border border-gray-800 hover:border-cyan-500 transition-all rounded-lg glow-card">
+                    <div class="aspect-video bg-gray-800 flex items-center justify-center text-gray-700 overflow-hidden relative">
+                        <i class="fas fa-code-branch text-4xl group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-gaming text-xl text-cyan-400">Cyber Portfolio</h3>
+                            <span class="text-[10px] text-gray-500 font-gaming">v2.0</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">A high-performance gaming themed portfolio with custom shaders and animations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-cyan-900/30 text-cyan-400 px-2 py-1 rounded">NEXT.JS</span>
+                            <span class="text-[10px] bg-purple-900/30 text-purple-400 px-2 py-1 rounded">THREE.JS</span>
+                            <span class="text-[10px] bg-pink-900/30 text-pink-400 px-2 py-1 rounded">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden bg-gray-900 border border-gray-800 hover:border-purple-500 transition-all rounded-lg glow-card">
+                    <div class="aspect-video bg-gray-800 flex items-center justify-center text-gray-700 overflow-hidden relative">
+                        <i class="fas fa-mobile-alt text-4xl group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-gaming text-xl text-purple-400">ZenShop App</h3>
+                            <span class="text-[10px] text-gray-500 font-gaming">STABLE</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Full-featured e-commerce mobile application with real-time tracking and AI support.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-blue-900/30 text-blue-400 px-2 py-1 rounded">FLUTTER</span>
+                            <span class="text-[10px] bg-yellow-900/30 text-yellow-400 px-2 py-1 rounded">FIREBASE</span>
+                            <span class="text-[10px] bg-green-900/30 text-green-400 px-2 py-1 rounded">STRIPE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden bg-gray-900 border border-gray-800 hover:border-pink-500 transition-all rounded-lg glow-card">
+                    <div class="aspect-video bg-gray-800 flex items-center justify-center text-gray-700 overflow-hidden relative">
+                        <i class="fas fa-film text-4xl group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-gaming text-xl text-pink-400">Glitch Reels</h3>
+                            <span class="text-[10px] text-gray-500 font-gaming">CREATIVE</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">A collection of cinematic high-energy commercial videos and motion graphics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-pink-900/30 text-pink-400 px-2 py-1 rounded">AFTER EFFECTS</span>
+                            <span class="text-[10px] bg-blue-900/30 text-blue-400 px-2 py-1 rounded">PREMIERE PRO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden bg-gray-900 border border-gray-800 hover:border-yellow-500 transition-all rounded-lg glow-card">
+                    <div class="aspect-video bg-gray-800 flex items-center justify-center text-gray-700 overflow-hidden relative">
+                        <i class="fas fa-palette text-4xl group-hover:scale-110 transition-transform"></i>
+                        <div class="absolute inset-0 bg-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-gaming text-xl text-yellow-400">Brand Identity</h3>
+                            <span class="text-[10px] text-gray-500 font-gaming">DESIGN</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Complete visual branding including logo, typography, and marketing assets for startups.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] bg-yellow-900/30 text-yellow-400 px-2 py-1 rounded">ILLUSTRATOR</span>
+                            <span class="text-[10px] bg-cyan-900/30 text-cyan-400 px-2 py-1 rounded">PHOTOSHOP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20 px-6 max-w-6xl mx-auto bg-gray-900/5">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4">Testimonials</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="testimonial-card p-8 rounded-br-3xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-800"></div>
+                        <div>
+                            <h4 class="font-gaming text-sm text-cyan-400">Web Development Partner</h4>
+                            <p class="text-[10px] text-gray-500 uppercase">Product Collaboration</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic text-sm leading-relaxed">"Delivered fast and clean frontend implementation with excellent communication and attention to product goals."</p>
+                </div>
+                <div class="testimonial-card p-8 rounded-br-3xl">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-800"></div>
+                        <div>
+                            <h4 class="font-gaming text-sm text-purple-400">Mobile App Stakeholder</h4>
+                            <p class="text-[10px] text-gray-500 uppercase">App Delivery</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 italic text-sm leading-relaxed">"Strong Flutter execution and practical problem-solving across feature delivery and integration."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
+            <h2 class="text-4xl font-gaming mb-12 border-b border-cyan-900 pb-4 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="faq-item py-4">
+                    <h4 class="font-gaming text-cyan-400 mb-2">What is your typical turnaround time?</h4>
+                    <p class="text-gray-400 text-sm">Dependent on the mission complexity. Web projects usually take 2-4 weeks, while video edits can be delivered within 3-7 days.</p>
+                </div>
+                <div class="faq-item py-4">
+                    <h4 class="font-gaming text-cyan-400 mb-2">Do you handle both design and development?</h4>
+                    <p class="text-gray-400 text-sm">Yes, I provide end-to-end solutions from UI/UX design and assets creation to the final deployment of the software or website.</p>
+                </div>
+                <div class="faq-item py-4">
+                    <h4 class="font-gaming text-cyan-400 mb-2">Are you available for freelance work?</h4>
+                    <p class="text-gray-400 text-sm">Currently, the signal is green for new collaborations. Feel free to transmit your mission details through the contact form.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-4xl font-gaming mb-8">Contact</h2>
+                <p class="text-gray-400 mb-8">Initiate communication for internships, remote roles, and freelance collaborations. I actively work across web and mobile projects.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-4">
+                        <div class="text-cyan-400 text-xl w-8"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase">Email Comms</p>
+                            <p class="font-gaming text-sm">Add your public email</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="text-purple-400 text-xl w-8"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <p class="text-[10px] text-gray-500 uppercase">Base Location</p>
+                            <p class="font-gaming text-sm">Dhaka, Bangladesh // Remote</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 mt-10">
+                    <a href="https://github.com/Barkotullah02" aria-label="GitHub" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Behance" class="social-link"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            
+            <div class="section-card p-8 rounded-lg">
+                <form class="space-y-4" method="post" action="#" aria-label="Contact form">
+                    <label for="name" class="sr-only">Your name</label>
+                    <input id="name" name="name" type="text" placeholder="YOUR_NAME" autocomplete="name" required class="w-full bg-gray-900 border border-gray-800 p-4 focus:border-cyan-500 outline-none transition font-gaming text-sm">
+                    <label for="email" class="sr-only">Your email</label>
+                    <input id="email" name="email" type="email" placeholder="YOUR_EMAIL" autocomplete="email" required class="w-full bg-gray-900 border border-gray-800 p-4 focus:border-cyan-500 outline-none transition font-gaming text-sm">
+                    <label for="message" class="sr-only">Your message</label>
+                    <textarea id="message" name="message" placeholder="PROJECT_OR_ROLE_DETAILS" rows="5" required class="w-full bg-gray-900 border border-gray-800 p-4 focus:border-cyan-500 outline-none transition font-gaming text-sm"></textarea>
+                    <button type="submit" class="neon-button w-full py-4 font-gaming uppercase tracking-widest">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center border-t border-gray-900 text-gray-600 text-xs font-gaming">
+        <div class="mb-4">
+            <a href="#home" class="mx-2 hover:text-cyan-400">HOME</a>
+            <a href="#about" class="mx-2 hover:text-cyan-400">ABOUT</a>
+            <a href="#services" class="mx-2 hover:text-cyan-400">SERVICES</a>
+            <a href="#projects" class="mx-2 hover:text-cyan-400">PROJECTS</a>
+            <a href="dev-daily.html" class="mx-2 hover:text-cyan-400">DEV DAILY</a>
+            <a href="#contact" class="mx-2 hover:text-cyan-400">CONTACT</a>
+        </div>
+        <p>&copy; 2026 Barkotullah Opu // Full Stack Developer // Built for web performance</p>
+    </footer>
+
+    <audio id="bgm" src="bgm.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

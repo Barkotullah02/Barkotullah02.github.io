@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Daily | Barkotullah Opu</title>
+    <meta name="description" content="Dev Daily by Barkotullah Opu: practical notes on full stack development, React, Flutter, and shipping better products.">
+    <meta name="author" content="Barkotullah Opu">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#050505">
+    <link rel="canonical" href="https://barkotullah02.github.io/dev-daily.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Barkotullah Opu Portfolio">
+    <meta property="og:title" content="Dev Daily | Barkotullah Opu">
+    <meta property="og:description" content="Daily developer notes, build logs, and practical engineering insights by Barkotullah Opu.">
+    <meta property="og:url" content="https://barkotullah02.github.io/dev-daily.html">
+    <meta property="og:image" content="https://barkotullah02.github.io/me_transparent.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dev Daily | Barkotullah Opu">
+    <meta name="twitter:description" content="Daily developer notes and practical software insights by Barkotullah Opu.">
+    <meta name="twitter:image" content="https://barkotullah02.github.io/me_transparent.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://barkotullah02.github.io/dev-daily.html#blog",
+          "name": "Dev Daily",
+          "description": "Dev journal and practical engineering notes by Barkotullah Opu.",
+          "url": "https://barkotullah02.github.io/dev-daily.html",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Person",
+            "name": "Barkotullah Opu",
+            "url": "https://barkotullah02.github.io/"
+          }
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://barkotullah02.github.io/dev-daily.html#post-2026-02-20",
+          "headline": "How I Structure Small Features for Fast Delivery",
+          "description": "A practical structure for shipping small features quickly without creating future maintenance pain.",
+          "datePublished": "2026-02-20",
+          "dateModified": "2026-02-20",
+          "mainEntityOfPage": "https://barkotullah02.github.io/dev-daily.html#post-2026-02-20",
+          "image": "https://barkotullah02.github.io/me_transparent.png",
+          "author": {
+            "@type": "Person",
+            "name": "Barkotullah Opu",
+            "url": "https://barkotullah02.github.io/"
+          },
+          "publisher": {
+            "@type": "Person",
+            "name": "Barkotullah Opu"
+          },
+          "isPartOf": {
+            "@id": "https://barkotullah02.github.io/dev-daily.html#blog"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-black text-white">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-cyan-900/50">
+        <a href="index.html" class="text-2xl font-bold font-gaming neon-text">Dev Daily</a>
+        <div class="space-x-6 hidden lg:flex items-center text-xs font-gaming">
+            <a href="index.html" class="hover:text-cyan-400 transition">HOME</a>
+            <a href="#posts" class="hover:text-cyan-400 transition">POSTS</a>
+            <a href="#publish-note" class="hover:text-cyan-400 transition">HOW TO PUBLISH</a>
+        </div>
+        <a href="index.html#contact" class="neon-button px-6 py-2 font-gaming text-sm uppercase hidden md:block">Hire Me</a>
+        <button class="lg:hidden text-cyan-400 text-2xl" aria-label="Open mobile menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-[60] flex flex-col items-center justify-center space-y-6 text-xl font-gaming hidden">
+        <button class="absolute top-6 right-6 text-cyan-400 text-3xl" aria-label="Close mobile menu" onclick="toggleMenu()">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" onclick="toggleMenu()" class="hover:text-cyan-400 transition">HOME</a>
+        <a href="#posts" onclick="toggleMenu()" class="hover:text-cyan-400 transition">POSTS</a>
+        <a href="#publish-note" onclick="toggleMenu()" class="hover:text-cyan-400 transition">HOW TO PUBLISH</a>
+    </div>
+
+    <main>
+        <section id="blog" class="min-h-[60vh] flex items-center justify-center pt-28 px-6">
+            <div class="max-w-5xl mx-auto text-center section-card p-8 md:p-12">
+                <h1 class="text-4xl md:text-6xl font-gaming mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">Dev Daily</h1>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    Build logs, practical notes, and software lessons from real projects in web and mobile development.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#posts" class="neon-button px-8 py-3 font-gaming uppercase text-center">Read Posts</a>
+                    <a href="#publish-note" class="px-8 py-3 border border-gray-700 hover:bg-gray-800 transition font-gaming uppercase text-center">Publish Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="posts" class="py-20 px-6 max-w-5xl mx-auto">
+            <h2 class="text-4xl font-gaming mb-10 border-b border-cyan-900 pb-4">Articles</h2>
+
+            <article id="post-2026-02-20" class="section-card p-8 rounded-lg">
+                <div class="flex flex-wrap items-center gap-3 text-xs mb-4">
+                    <time datetime="2026-02-20" class="px-3 py-1 bg-gray-900 border border-gray-800 rounded text-cyan-300">2026-02-20</time>
+                    <span class="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded">React</span>
+                    <span class="px-3 py-1 bg-purple-900/30 text-purple-300 rounded">Architecture</span>
+                    <span class="px-3 py-1 bg-pink-900/30 text-pink-300 rounded">Delivery</span>
+                </div>
+
+                <h3 class="text-2xl md:text-3xl font-gaming text-cyan-400 mb-3">How I Structure Small Features for Fast Delivery</h3>
+                <p class="text-gray-300 mb-6">
+                    <strong>Summary:</strong> I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.
+                </p>
+
+                <section class="mb-5">
+                    <h4 class="font-gaming text-lg text-purple-300 mb-2">1) Start with one visible outcome</h4>
+                    <p class="text-gray-400">Define the single user-visible result first. This avoids overbuilding and helps validate value quickly.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h4 class="font-gaming text-lg text-purple-300 mb-2">2) Keep the structure predictable</h4>
+                    <p class="text-gray-400">Use existing component patterns and naming conventions so each commit stays easy to review and revert if needed.</p>
+                </section>
+
+                <section>
+                    <h4 class="font-gaming text-lg text-purple-300 mb-2">3) Ship in narrow slices</h4>
+                    <p class="text-gray-400">Deliver UI, behavior, and edge-cases in small passes. This keeps risk low and feedback fast.</p>
+                </section>
+            </article>
+        </section>
+
+        <section id="publish-note" class="py-10 px-6 max-w-5xl mx-auto">
+            <div class="section-card p-6 border-l-4 border-yellow-500 bg-yellow-900/10">
+                <h2 class="text-2xl font-gaming text-yellow-300 mb-3">How to publish a new post</h2>
+                <p class="text-gray-300">Duplicate an existing <strong>&lt;article&gt;</strong> block inside the <strong>#posts</strong> section and edit date, tags, title, summary, and body sections. Keep each article <strong>id</strong> unique, then update <strong>sitemap.xml</strong> with the new anchor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-10 text-center border-t border-gray-900 text-gray-600 text-xs font-gaming">
+        <div class="mb-4">
+            <a href="index.html" class="mx-2 hover:text-cyan-400">HOME</a>
+            <a href="#posts" class="mx-2 hover:text-cyan-400">POSTS</a>
+            <a href="#publish-note" class="mx-2 hover:text-cyan-400">HOW TO PUBLISH</a>
+        </div>
+        <p>&copy; 2026 Barkotullah Opu // Dev Daily</p>
+    </footer>
+
+    <audio id="bgm" src="bgm.mp3" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>
