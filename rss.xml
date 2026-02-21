@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Barkotullah Opu - Dev Daily</title>
+  <link>https://barkotullah02.github.io/dev-daily.html</link>
+  <description>Dev Daily posts by Barkotullah Opu on full stack development, React, Flutter, and shipping real products.</description>
+  <language>en-us</language>
+  <atom:link href="https://barkotullah02.github.io/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Sat, 21 Feb 2026 06:56:22 GMT</lastBuildDate>
+    <item>
+    <title>How I Structure Small Features for Fast Delivery</title>
+    <link>https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html</link>
+    <guid isPermaLink="false">https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html#post-2026-02-20-fast-delivery</guid>
+    <pubDate>Fri, 20 Feb 2026 00:00:00 GMT</pubDate>
+    <description>I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.</description>
+  </item>
+  <item>
+    <title>Future Builders Hackathon: My Journey with NSU_MissionX to First Place</title>
+    <link>https://barkotullah02.github.io/posts/future-builders-ai-hackathon-nsu-missionx-first-place.html</link>
+    <guid isPermaLink="false">https://barkotullah02.github.io/posts/future-builders-ai-hackathon-nsu-missionx-first-place.html#post-2025-12-28-future-builders</guid>
+    <pubDate>Sun, 28 Dec 2025 00:00:00 GMT</pubDate>
+    <description>At the Future Builders AI-Driven Cognitive Innovation Hackathon, I worked as one of the three members of NSU_MissionX and led all technical implementation to build our solution under intense time pressure.</description>
+  </item>
+</channel>
+</rss>

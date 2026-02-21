@@ -1,0 +1,54 @@
+[
+  {
+    "id": "post-2026-02-20-fast-delivery",
+    "slug": "how-i-structure-small-features-for-fast-delivery",
+    "title": "How I Structure Small Features for Fast Delivery",
+    "summary": "I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.",
+    "datePublished": "2026-02-20",
+    "dateModified": "2026-02-20",
+    "tags": ["React", "Architecture", "Delivery"],
+    "image": "me_transparent.png",
+    "imageAlt": "Workflow sketch showing small feature slices from planning to shipping",
+    "imageCaption": "A small-feature delivery flow: scope, structure, and fast feedback loops.",
+    "sections": [
+      {
+        "heading": "Start with one visible outcome",
+        "body": "Define the single user-visible result first. This avoids overbuilding and helps validate value quickly."
+      },
+      {
+        "heading": "Keep the structure predictable",
+        "body": "Use existing component patterns and naming conventions so each commit stays easy to review and revert if needed."
+      },
+      {
+        "heading": "Ship in narrow slices",
+        "body": "Deliver UI, behavior, and edge-cases in small passes. This keeps risk low and feedback fast."
+      }
+    ]
+  },
+  {
+    "id": "post-2025-12-28-future-builders",
+    "slug": "future-builders-ai-hackathon-nsu-missionx-first-place",
+    "title": "Future Builders Hackathon: My Journey with NSU_MissionX to First Place",
+    "summary": "At the Future Builders AI-Driven Cognitive Innovation Hackathon, I worked as one of the three members of NSU_MissionX and led all technical implementation to build our solution under intense time pressure.",
+    "datePublished": "2025-12-28",
+    "dateModified": "2026-02-21",
+    "tags": ["AI Hackathon", "IEEE NSU SB", "NSU_MissionX"],
+    "image": "images/futurebuilders.png",
+    "imageAlt": "NSU_MissionX team at the Future Builders AI-Driven Cognitive Innovation Hackathon after presenting the solution",
+    "imageCaption": "NSU_MissionX at Future Builders Round 02—an 8-hour sprint where I handled end-to-end technical implementation before we advanced and secured first place.",
+    "sections": [
+      {
+        "heading": "Round 02: 8-hour on-site build challenge",
+        "body": "IEEE NSU Student Branch hosted the event on December 28, 2025, powered by Tanvir Constructions Ltd. with TCL Informatix Ltd. as Technology Partner. The top 20 teams from Round 01 entered an 8-hour on-site marathon after the official briefing and problem statement reveal."
+      },
+      {
+        "heading": "Execution flow and judging",
+        "body": "The day began with breakfast at 8:00 AM, coding started at 8:30 AM, and development continued through coffee and lunch breaks until code freeze at 4:30 PM. Judging combined online review and in-person technical discussion by Saif Ahmed, while the panel included Shaikh Tariqul Islam, Umnoon Binta Ali, and Shahrukh Ikhtear."
+      },
+      {
+        "heading": "Final round, result, and my role",
+        "body": "The top 5 teams advanced to Round 03 at SPAC 25: NerdHerd, IUT_CGPA_Doesn’t_Matter, NSU_MissionX, NSU-Zazabores, and NSU_BUET_AIUB.exe. In the finale, the judging panel included Mohammad Shafayet Hossain, Shaikh Tariqul Islam, and Umnoon Binta Ali. NSU_MissionX presented Shastho Bondhu and secured first place from the 100,000 BDT prize pool. As one of the three team members, I led the full technical implementation and delivery of our solution."
+      }
+    ]
+  }
+]

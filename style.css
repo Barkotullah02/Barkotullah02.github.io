@@ -129,6 +129,29 @@ li {
         inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
+.article-media {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(10, 10, 10, 0.45);
+}
+
+.article-media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 28rem;
+    object-fit: contain;
+    background: rgba(5, 5, 5, 0.8);
+}
+
+.article-media figcaption {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
 .achievement-card {
     background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
     border: 1px solid #333;

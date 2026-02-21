@@ -1,0 +1,8 @@
+{
+  "name": "barkotullah02-github-io",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build:seo": "node scripts/build-seo.mjs"
+  }
+}

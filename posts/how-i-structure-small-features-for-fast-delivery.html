@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I Structure Small Features for Fast Delivery | Dev Daily | Barkotullah Opu</title>
+    <meta name="description" content="I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.">
+    <meta name="author" content="Barkotullah Opu">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#050505">
+    <link rel="canonical" href="https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html">
+    <link rel="alternate" type="application/rss+xml" title="Barkotullah Opu Dev Daily RSS" href="https://barkotullah02.github.io/rss.xml">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Barkotullah Opu Portfolio">
+    <meta property="og:title" content="How I Structure Small Features for Fast Delivery">
+    <meta property="og:description" content="I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.">
+    <meta property="og:url" content="https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html">
+    <meta property="og:image" content="https://barkotullah02.github.io/me_transparent.png">
+    <meta property="og:image:alt" content="Workflow sketch showing small feature slices from planning to shipping">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How I Structure Small Features for Fast Delivery">
+    <meta name="twitter:description" content="I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.">
+    <meta name="twitter:image" content="https://barkotullah02.github.io/me_transparent.png">
+    <meta name="twitter:image:alt" content="Workflow sketch showing small feature slices from planning to shipping">
+    <meta name="twitter:creator" content="@OnlymeOpu">
+    <meta name="twitter:site" content="@OnlymeOpu">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html#blogposting","headline":"How I Structure Small Features for Fast Delivery","description":"I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.","datePublished":"2026-02-20","dateModified":"2026-02-20","mainEntityOfPage":"https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html","image":"https://barkotullah02.github.io/me_transparent.png","author":{"@id":"https://barkotullah02.github.io/#person"},"publisher":{"@type":"Person","name":"Barkotullah Opu"},"isPartOf":{"@id":"https://barkotullah02.github.io/dev-daily.html#blog"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://barkotullah02.github.io/"},{"@type":"ListItem","position":2,"name":"Dev Daily","item":"https://barkotullah02.github.io/dev-daily.html"},{"@type":"ListItem","position":3,"name":"How I Structure Small Features for Fast Delivery","item":"https://barkotullah02.github.io/posts/how-i-structure-small-features-for-fast-delivery.html"}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://barkotullah02.github.io/#person","name":"Barkotullah Opu","alternateName":["Barkatullah Opu","Barkatullah","Opu"],"url":"https://barkotullah02.github.io/","image":"https://barkotullah02.github.io/me_transparent.png","sameAs":["https://www.linkedin.com/in/barkotullahopu","https://github.com/Barkotullah02","https://x.com/OnlymeOpu","https://www.facebook.com/Only.meOpu","https://www.instagram.com/xoaifa/"]}</script>
+</head>
+<body class="bg-black text-white">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-black/50 backdrop-blur-md border-b border-cyan-900/50">
+      <div class="flex items-center gap-2">
+        <a href="../dev-daily.html" class="text-2xl font-bold font-gaming neon-text">Dev Daily</a>
+        <a href="../rss.xml" aria-label="Subscribe to Dev Daily RSS" class="text-cyan-300 hover:text-cyan-400 transition text-sm px-2 py-1 rounded border border-cyan-700/70">
+          <i class="fas fa-rss"></i>
+        </a>
+      </div>
+        <div class="space-x-6 hidden lg:flex items-center text-xs font-gaming">
+            <a href="../index.html" class="hover:text-cyan-400 transition">HOME</a>
+            <a href="../dev-daily.html" class="hover:text-cyan-400 transition">ALL POSTS</a>
+        <a href="../rss.xml" class="hover:text-cyan-400 transition">RSS</a>
+        </div>
+        <a href="../index.html#contact" class="neon-button px-6 py-2 font-gaming text-sm uppercase hidden md:block">Hire Me</a>
+    </nav>
+
+    <main class="pt-28 pb-16 px-6">
+        <article class="max-w-4xl mx-auto section-card p-8 md:p-10 rounded-lg">
+            <div class="flex flex-wrap items-center gap-3 text-xs mb-5">
+                <time datetime="2026-02-20" class="px-3 py-1 bg-gray-900 border border-gray-800 rounded text-cyan-300">2026-02-20</time>
+                <span class="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded text-xs">React</span>
+                        <span class="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded text-xs">Architecture</span>
+                        <span class="px-3 py-1 bg-cyan-900/30 text-cyan-300 rounded text-xs">Delivery</span>
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-gaming text-cyan-400 mb-4">How I Structure Small Features for Fast Delivery</h1>
+            <p class="text-gray-300 mb-8 leading-relaxed">I keep feature scope small, isolate UI and logic clearly, and ship in testable increments so speed does not break maintainability.</p>
+            <p class="text-xs text-gray-500 mb-8">Author: Barkotullah Opu (also written as Barkatullah Opu).</p>
+
+            <figure class="article-media mb-8">
+                <img src="../me_transparent.png" alt="Workflow sketch showing small feature slices from planning to shipping" loading="lazy" decoding="async">
+                <figcaption>A small-feature delivery flow: scope, structure, and fast feedback loops.</figcaption>
+            </figure>
+
+            
+                <section class="mb-6">
+                    <h2 class="font-gaming text-2xl text-purple-300 mb-2">1) Start with one visible outcome</h2>
+                    <p class="text-gray-300 leading-relaxed">Define the single user-visible result first. This avoids overbuilding and helps validate value quickly.</p>
+                </section>
+                <section class="mb-6">
+                    <h2 class="font-gaming text-2xl text-purple-300 mb-2">2) Keep the structure predictable</h2>
+                    <p class="text-gray-300 leading-relaxed">Use existing component patterns and naming conventions so each commit stays easy to review and revert if needed.</p>
+                </section>
+                <section class="">
+                    <h2 class="font-gaming text-2xl text-purple-300 mb-2">3) Ship in narrow slices</h2>
+                    <p class="text-gray-300 leading-relaxed">Deliver UI, behavior, and edge-cases in small passes. This keeps risk low and feedback fast.</p>
+                </section>
+
+            <div class="mt-10 pt-6 border-t border-gray-800 flex flex-col sm:flex-row gap-3">
+                <a href="../dev-daily.html#posts" class="neon-button px-6 py-3 font-gaming text-sm uppercase text-center">Back to Dev Daily</a>
+                <a href="../index.html" class="px-6 py-3 border border-gray-700 hover:bg-gray-800 transition font-gaming text-sm uppercase text-center">Back to Home</a>
+              <a href="../rss.xml" class="px-6 py-3 border border-cyan-700 hover:bg-cyan-900/20 transition font-gaming text-sm uppercase text-center">Subscribe RSS</a>
+            </div>
+        </article>
+    </main>
+
+    <script src="../script.js"></script>
+</body>
+</html>

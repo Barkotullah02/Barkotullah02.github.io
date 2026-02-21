@@ -1,0 +1,42 @@
+name: Auto SEO Build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/posts.json
+      - scripts/build-seo.mjs
+      - dev-daily.html
+      - style.css
+      - images/**
+
+permissions:
+  contents: write
+
+jobs:
+  build-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build SEO artifacts
+        run: node scripts/build-seo.mjs
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git add dev-daily.html posts sitemap.xml sitemap_1.xml rss.xml
+            git commit -m "chore: auto-generate seo artifacts [skip ci]"
+            git push
+          else
+            echo "No generated changes to commit."
+          fi
