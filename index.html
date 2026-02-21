@@ -39,19 +39,35 @@
                     "alternateName": [
                         "Barkatullah Opu",
                         "Barkatullah",
-                        "Opu"
+                        "Opu",
+                        "Barkotullah",
+                        "Barkat Ullah Opu"
                     ],
                     "url": "https://barkotullah02.github.io/",
                     "image": "https://barkotullah02.github.io/me_transparent.png",
                     "jobTitle": "Full Stack Developer",
                     "description": "Barkotullah Opu is a Full Stack Developer specializing in web and mobile apps using React and Flutter. Student Worker at NSU IT, Campus Coordinator at YUNet, Campus Ambassador at bdapps, and IT Officer at ShobShopping.",
-                    "knowsAbout": ["React", "Flutter", "Web Development", "Mobile App Development", "JavaScript", "Tailwind CSS"],
+                    "knowsAbout": ["React", "Flutter", "Web Development", "Mobile App Development", "JavaScript", "Tailwind CSS", "Node.js", "Firebase", "REST APIs"],
+                    "email": "barkotullahopu@gmail.com",
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "email": "barkotullahopu@gmail.com",
+                        "contactType": "Professional Inquiries",
+                        "availableLanguage": ["English", "Bengali"]
+                    },
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Narayanganj",
+                        "addressRegion": "Dhaka",
+                        "addressCountry": "BD"
+                    },
                     "sameAs": [
                         "https://www.linkedin.com/in/barkotullahopu",
                         "https://github.com/Barkotullah02",
                         "https://x.com/OnlymeOpu",
                         "https://www.facebook.com/Only.meOpu",
-                        "https://www.instagram.com/xoaifa/"
+                        "https://www.instagram.com/xoaifa/",
+                        "https://www.linkedin.com/in/barkotullah-opu-700254258/"
                     ]
                 },
                 {
@@ -110,6 +126,35 @@
                             "position": 5,
                             "name": "Contact",
                             "url": "https://barkotullah02.github.io/#contact"
+                        }
+                    ]
+                },
+                {
+                    "@type": "FAQPage",
+                    "mainEntity": [
+                        {
+                            "@type": "Question",
+                            "name": "Who is Barkotullah Opu?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Barkotullah Opu (also written as Barkatullah Opu, Barkatullah, or simply Opu) is a Full Stack Developer specializing in React and Flutter development. He works as a Student Worker at NSU IT, Campus Coordinator at YUNet, and IT Officer at ShobShopping."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "How to contact Barkotullah Opu?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "You can contact Barkotullah Opu via email at barkotullahopu@gmail.com or through his social profiles on LinkedIn, GitHub, Twitter, Facebook, and Instagram."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "What services does Barkatullah Opu provide?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Barkatullah Opu provides full-stack web development, cross-platform mobile app development with Flutter, React development, Firebase integration, REST API development, and UI/UX implementation services."
+                            }
                         }
                     ]
                 }
@@ -574,7 +619,7 @@
             </div>
             
             <div class="section-card p-8 rounded-lg">
-                <form class="space-y-4" method="post" action="#" aria-label="Contact form">
+                <form class="space-y-4" aria-label="Contact form">
                     <label for="name" class="sr-only">Your name</label>
                     <input id="name" name="name" type="text" placeholder="YOUR_NAME" autocomplete="name" required class="w-full bg-gray-900 border border-gray-800 p-4 focus:border-cyan-500 outline-none transition font-gaming text-sm">
                     <label for="email" class="sr-only">Your email</label>
@@ -583,6 +628,7 @@
                     <textarea id="message" name="message" placeholder="PROJECT_OR_ROLE_DETAILS" rows="5" required class="w-full bg-gray-900 border border-gray-800 p-4 focus:border-cyan-500 outline-none transition font-gaming text-sm"></textarea>
                     <button type="submit" class="neon-button w-full py-4 font-gaming uppercase tracking-widest">Send Message</button>
                 </form>
+                <p class="text-gray-500 text-xs mt-4 text-center">Submissions are securely stored. <a href="contact-admin.html" class="text-cyan-400 hover:underline">Admin Panel</a></p>
             </div>
         </section>
     </main>
@@ -601,6 +647,7 @@
 
     <audio id="bgm" src="bgm.mp3" loop></audio>
 
+    <script src="contact-handler.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
