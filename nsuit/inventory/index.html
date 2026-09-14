@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in · Inventory Beacon</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="card card-pad auth-card">
+      <div class="brand"><span class="mark" id="brandMark"></span> Inventory Beacon</div>
+      <p class="muted" style="text-align:center;margin-top:-6px;margin-bottom:22px">IT stock &amp; gadget assignment</p>
+      <form id="loginForm">
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" type="email" id="email" name="email" autocomplete="username" required />
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input class="input" type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        <button class="btn primary" type="submit" style="width:100%;justify-content:center" id="submitBtn">Sign in</button>
+        <p id="error" class="faint" style="color:var(--danger);margin:12px 0 0;min-height:18px"></p>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
