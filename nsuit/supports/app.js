@@ -473,24 +473,31 @@
       title: "Assign task",
       confirmText: "Create",
       bodyHTML: `
-        <label class="field"><span>Assign to *</span>
-          <select id="tk-member">${members.length ? members.map((m) => `<option value="${esc(m.id)}">${esc(m.full_name || m.email)}</option>`).join("") : `<option value="">No members</option>`}</select>
-        </label>
+        <label class="field"><span>Assign to * (select one or more)</span></label>
+        <div id="tk-members" style="max-height:180px;overflow:auto;border:1px solid var(--border);border-radius:10px;padding:8px;margin-bottom:14px">
+          ${members.length
+            ? members.map((m) => `<label style="display:flex;gap:8px;align-items:center;padding:5px 2px">
+                <input type="checkbox" value="${esc(m.id)}" style="width:auto"> ${esc(m.full_name || m.email)}
+              </label>`).join("")
+            : `<span style="color:var(--muted)">No members</span>`}
+        </div>
         <label class="field"><span>Title *</span><input id="tk-title" /></label>
         <label class="field"><span>Description</span><textarea id="tk-desc" rows="3"></textarea></label>
         <label class="field"><span>Due date</span><input id="tk-due" type="date" /></label>`,
       onConfirm: async (setError) => {
-        const assigned_to = $("tk-member").value;
+        const ids = [...document.querySelectorAll('#tk-members input:checked')].map((c) => c.value);
         const title = $("tk-title").value.trim();
-        if (!assigned_to) { setError("No member to assign to."); return false; }
+        if (!ids.length) { setError("Select at least one member."); return false; }
         if (!title) { setError("Title is required."); return false; }
         const due = $("tk-due").value;
-        const { error } = await sb.from("tasks").insert({
-          assigned_by: me.id, assigned_to, title,
-          description: $("tk-desc").value.trim() || null,
-          due_date: due ? new Date(due).toISOString() : null,
-          status: "pending",
-        });
+        const description = $("tk-desc").value.trim() || null;
+        const dueIso = due ? new Date(due).toISOString() : null;
+        // Fan-out: one task row per selected member.
+        const rows = ids.map((assigned_to) => ({
+          assigned_by: me.id, assigned_to, title, description,
+          due_date: dueIso, status: "pending",
+        }));
+        const { error } = await sb.from("tasks").insert(rows);
         if (error) throw error;
         renderTasks();
       },
