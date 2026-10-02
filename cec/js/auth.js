@@ -49,7 +49,3 @@ export async function signOut() {
   const { error } = await supabase.auth.signOut();
   if (error) console.error('[auth] signOut error:', error);
 }
-
-export function onAuthStateChange(callback) {
-  supabase.auth.onAuthStateChange((_event, session) => callback(session));
-}

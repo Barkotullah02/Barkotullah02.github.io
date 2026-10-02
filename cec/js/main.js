@@ -1,4 +1,4 @@
-import { getCurrentAdmin, onAuthStateChange, signIn, signOut } from './auth.js';
+import { getCurrentAdmin, signIn, signOut } from './auth.js';
 import { qs, showToast } from './dom.js';
 import { initApplicantsView } from './views/applicantsView.js';
 import { initFormBuilderView } from './views/formBuilderView.js';
@@ -98,10 +98,6 @@ qs('#logout-btn').addEventListener('click', async () => {
   activeTab = 'applicants';
   showLogin();
   showToast('Signed out', 'info');
-});
-
-onAuthStateChange((session) => {
-  if (!session) showLogin();
 });
 
 boot();
