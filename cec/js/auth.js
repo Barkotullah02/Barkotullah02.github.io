@@ -4,17 +4,13 @@ import { supabase } from './supabaseClient.js';
 // signed in but not present in the `admins` table (RLS also enforces this
 // server-side — this check just drives the UI).
 export async function getCurrentAdmin() {
-  console.log('[auth] getCurrentAdmin: calling getSession()…');
   const { data: { session }, error: sessionError } = await supabase.auth.getSession();
   if (sessionError) console.error('[auth] getSession() error:', sessionError);
-  console.log('[auth] getSession() resolved, session:', session);
 
-  if (!session) {
-    console.log('[auth] no session — not signed in');
-    return null;
-  }
+  // Never log the session object itself — it carries a live access_token
+  // and refresh_token, usable by anyone who sees the console.
+  if (!session) return null;
 
-  console.log('[auth] querying admins table for user id', session.user.id);
   const { data, error } = await supabase
     .from('admins')
     .select('id, full_name, email')
@@ -30,22 +26,18 @@ export async function getCurrentAdmin() {
     return null;
   }
 
-  console.log('[auth] admin row found:', data);
   return data;
 }
 
 export async function signIn(email, password) {
-  console.log('[auth] signIn: calling signInWithPassword for', email);
-  const { data, error } = await supabase.auth.signInWithPassword({ email, password });
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
   if (error) {
     console.error('[auth] signInWithPassword error:', error);
     throw error;
   }
-  console.log('[auth] signInWithPassword succeeded, user id:', data.user?.id);
 }
 
 export async function signOut() {
-  console.log('[auth] signOut');
   const { error } = await supabase.auth.signOut();
   if (error) console.error('[auth] signOut error:', error);
 }

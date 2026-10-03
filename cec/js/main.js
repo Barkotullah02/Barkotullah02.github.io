@@ -14,9 +14,12 @@ let activeTab = 'applicants';
 let currentAdmin = null;
 
 async function boot() {
-  console.log('[main] boot() starting');
-  currentAdmin = await getCurrentAdmin();
-  console.log('[main] boot() got currentAdmin:', currentAdmin);
+  try {
+    currentAdmin = await getCurrentAdmin();
+  } catch (err) {
+    console.error('[main] boot() failed:', err);
+    currentAdmin = null;
+  }
   if (currentAdmin) {
     showApp();
   } else {
@@ -69,13 +72,10 @@ qs('#login-form').addEventListener('submit', async (e) => {
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Signing in…';
-  console.log('[main] login form submitted for', email);
 
   try {
     await signIn(email, password);
-    console.log('[main] signIn() resolved, now resolving admin status…');
     currentAdmin = await getCurrentAdmin();
-    console.log('[main] resolved currentAdmin:', currentAdmin);
     if (!currentAdmin) {
       showLogin("Signed in, but this account isn't registered as an admin. Ask an existing admin to add you.");
       await signOut();
@@ -88,7 +88,6 @@ qs('#login-form').addEventListener('submit', async (e) => {
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = 'Sign in';
-    console.log('[main] login flow finished');
   }
 });
 

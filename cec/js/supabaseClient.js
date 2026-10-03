@@ -3,6 +3,12 @@ import { SUPABASE_ANON_KEY, SUPABASE_URL } from './config.js';
 // createClient comes from the global `supabase` object set by the UMD
 // <script> tag in index.html, loaded before this module — see the comment
 // there for why we don't import it as an ES module from the CDN.
+if (!window.supabase) {
+  throw new Error(
+    'window.supabase is not defined — the Supabase UMD script in index.html failed to load ' +
+    '(blocked by an ad blocker/extension, offline, or the CDN is down). Check the Network tab.'
+  );
+}
 const { createClient } = window.supabase;
 
 // persistSession/autoRefreshToken are off on purpose: supabase-js's session

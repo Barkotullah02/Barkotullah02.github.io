@@ -22,6 +22,12 @@
 
 * { box-sizing: border-box; }
 
+/* Author-stylesheet display rules (e.g. .login-screen's display:flex) beat
+   the browser's default [hidden]{display:none} regardless of specificity,
+   so without this, toggling the `hidden` property/attribute silently does
+   nothing on any element that also has its own `display` rule. */
+[hidden] { display: none !important; }
+
 body {
   margin: 0;
   background: var(--paper);
