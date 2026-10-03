@@ -1,5 +1,9 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 import { SUPABASE_ANON_KEY, SUPABASE_URL } from './config.js';
+
+// createClient comes from the global `supabase` object set by the UMD
+// <script> tag in index.html, loaded before this module — see the comment
+// there for why we don't import it as an ES module from the CDN.
+const { createClient } = window.supabase;
 
 // persistSession/autoRefreshToken are off on purpose: supabase-js's session
 // persistence goes through the browser's Web Locks API, which can deadlock
